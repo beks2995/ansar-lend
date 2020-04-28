@@ -1,0 +1,83 @@
+.nav-overlay-left{
+    position: absolute;
+    left: -65%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #2a2a2a;
+    z-index: 11;
+    transition: 0.5s;
+}
+.nav-overlay-left.active{
+    left: 0;
+    position: fixed;
+}
+.nav-overlay-right{
+    position: absolute;
+    right: -65%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #FAF4D0;
+    z-index: 11;
+    transition: 0.5s;
+}
+.nav-overlay-right.active{
+    right: 0;
+    position: fixed;
+}
+main, header, footer{
+    transition: 0.4s;
+}
+main.active, header.active, footer.active{
+    filter: blur(5px);
+}
+.address{
+    cursor: pointer;
+}
+.map{
+    position: fixed;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 111;
+}
+.map.active{
+    display: block;
+}
+.close-map span{
+    position: absolute;
+    border: 1px solid #bebebe;
+    border-radius: 45px;
+    right: -38px;
+    top: -31px;
+    z-index: 112;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+.close-map span:before{
+    content: '';
+    height: 2px;
+    top: 13px;
+    right: 0;
+    background: #000;
+    width: 30px;
+    position: absolute;
+    transform: rotate(45deg);
+}
+.close-map span:after{
+    content: '';
+    height: 2px;
+    top: 13px;
+    right: 0;
+    background: #000;
+    width: 30px;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+.fixed{
+    position: fixed;
+    width: 100%;
+}
